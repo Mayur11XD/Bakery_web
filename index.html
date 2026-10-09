@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAJDHANI Bakery | Freshly Baked Happiness</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        <p><i class="fa-solid fa-heart"></i> Freshly baked with love, every single day!</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#home" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-cookie-bite"></i></span>
+            <span>RAJDHANI<small>BAKERY & CONFECTIONERY</small></span>
+        </a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#products" class="nav-link">Our Menu</a>
+            <a href="#about" class="nav-link">Our Story</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="icon-btn" id="searchToggle" aria-label="Search products">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <button class="cart-button" id="cartToggle" aria-label="Open shopping cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Cart</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search cakes, bread, pastries...">
+        <button id="closeSearch" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow"><i class="fa-solid fa-star"></i> MADE FRESH, MADE WITH LOVE</span>
+
+                <h1>Life is sweeter<br>with <span>Rajdhani.</span></h1>
+
+                <p>
+                    From celebration cakes to your everyday bread,
+                    discover freshly baked delights made to bring a smile
+                    to every bite.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        Explore Our Menu <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="btn btn-outline">Our Story</a>
+                </div>
+
+                <div class="hero-note">
+                    <div class="note-icon"><i class="fa-solid fa-bread-slice"></i></div>
+                    <div>
+                        <strong>Freshness you can taste</strong>
+                        <p>Your daily dose of happiness!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1100&q=85"
+                    alt="Beautiful chocolate celebration cake"
+                >
+                <div class="floating-card">
+                    <span class="floating-icon">🎂</span>
+                    <div>
+                        <strong>Made for celebrations</strong>
+                        <p>Every moment matters</p>
+                    </div>
+                </div>
+                <div class="hero-decoration decoration-one">✦</div>
+                <div class="hero-decoration decoration-two">✧</div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits">
+            <div class="benefit">
+                <i class="fa-solid fa-bread-slice"></i>
+                <div><strong>Freshly Baked</strong><p>Made with care</p></div>
+            </div>
+            <div class="benefit">
+                <i class="fa-solid fa-heart"></i>
+                <div><strong>Made with Love</strong><p>Quality in every bite</p></div>
+            </div>
+            <div class="benefit">
+                <i class="fa-solid fa-cake-candles"></i>
+                <div><strong>Every Occasion</strong><p>Sweeten your moments</p></div>
+            </div>
+            <div class="benefit">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div><strong>Easy Ordering</strong><p>Choose your favourites</p></div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="products-section section-padding" id="products">
+            <div class="section-heading">
+                <span class="eyebrow">A LITTLE SOMETHING DELICIOUS</span>
+                <h2>Our Bakery <span>Favourites</span></h2>
+                <p>Handpicked treats to make your day a little sweeter.</p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="category-filters" id="categoryFilters">
+                <button class="filter-btn active" data-category="All">All Items</button>
+                <button class="filter-btn" data-category="Cakes">Cakes</button>
+                <button class="filter-btn" data-category="Pastries">Pastries</button>
+                <button class="filter-btn" data-category="Bread">Bread</button>
+                <button class="filter-btn" data-category="Cookies">Cookies</button>
+                <button class="filter-btn" data-category="Snacks">Snacks</button>
+                <button class="filter-btn" data-category="Beverages">Beverages</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Product cards are generated by JavaScript -->
+            </div>
+
+            <p class="no-results" id="noResults" hidden>
+                No products found. Try another search! 🍪
+            </p>
+        </section>
+
+        <!-- Special Banner -->
+        <section class="special-banner">
+            <div class="special-content">
+                <span class="eyebrow">SOMETHING TO CELEBRATE?</span>
+                <h2>Make every occasion<br>extra <span>special.</span></h2>
+                <p>Birthday parties, anniversaries or just because — find a cake for your special moment.</p>
+                <a href="#products" class="btn btn-light">
+                    Find Your Cake <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="special-image">
+                <img
+                    src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=85"
+                    alt="Cake decorated for a special celebration"
+                    loading="lazy"
+                >
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about-section section-padding" id="about">
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85"
+                    alt="Freshly baked artisan bread"
+                    loading="lazy"
+                >
+                <div class="about-stamp">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>BAKED<br>WITH LOVE</span>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="eyebrow">WELCOME TO RAJDHANI</span>
+                <h2>A little warmth<br>in <span>every bite.</span></h2>
+                <p>
+                    At RAJDHANI Bakery, we believe the simplest moments
+                    can be the sweetest. From soft breads and buttery
+                    cookies to indulgent cakes, our menu brings together
+                    the bakery classics everyone loves.
+                </p>
+                <p>
+                    Whether you are celebrating a milestone or enjoying
+                    your evening chai, there is always something delicious
+                    waiting for you.
+                </p>
+                <a href="#products" class="text-link">
+                    Discover our menu <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Newsletter / Contact CTA -->
+        <section class="newsletter" id="contact">
+            <div>
+                <span class="eyebrow">LET'S MAKE YOUR DAY SWEETER</span>
+                <h2>Got a sweet tooth?</h2>
+                <p>Explore the menu and order your favourite bakery treats.</p>
+            </div>
+            <a href="#products" class="btn btn-primary">
+                Shop Our Menu <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#home" class="logo footer-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-cookie-bite"></i></span>
+                    <span>RAJDHANI<small>BAKERY & CONFECTIONERY</small></span>
+                </a>
+                <p>Fresh bakes, happy hearts.<br>A little sweetness for everyone.</p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <a href="#home">Home</a>
+                <a href="#products">Our Menu</a>
+                <a href="#about">Our Story</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Menu</h3>
+                <a href="#products" data-footer-category="Cakes">Cakes</a>
+                <a href="#products" data-footer-category="Bread">Bread</a>
+                <a href="#products" data-footer-category="Pastries">Pastries</a>
+                <a href="#products" data-footer-category="Cookies">Cookies</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Get in Touch</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Add your bakery address</p>
+                <p><i class="fa-solid fa-phone"></i> Add your phone number</p>
+                <p><i class="fa-solid fa-clock"></i> Add your opening hours</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="currentYear"></span> RAJDHANI Bakery. All rights reserved.</p>
+            <p>Made with <i class="fa-solid fa-heart"></i> and a little sugar.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Shopping Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <span class="eyebrow">YOUR GOODIES</span>
+                <h2>Your Cart <span id="drawerCount">(0)</span></h2>
+            </div>
+            <button class="close-cart" id="closeCart" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+            <p class="cart-note">Delivery charges, if any, are extra.</p>
+            <button class="btn btn-primary checkout-btn" id="checkoutBtn">
+                Order on WhatsApp <i class="fa-brands fa-whatsapp"></i>
+            </button>
+            <button class="continue-shopping" id="continueShopping">Continue Shopping</button>
+        </div>
+    </aside>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Added to cart!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
